@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $BASE_URL ?>auth.php">Entrar/Cadastrar</a>
+                        <a class="link-login" href="<?= $BASE_URL ?>auth.php">Entrar/Cadastrar</a>
                     </li>
                 </ul>
             </div>
