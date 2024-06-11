@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="link-login" href="<?= $BASE_URL ?>auth.php">Entrar/Cadastrar</a>
+                        <a class="nav-link" href="<?= $BASE_URL ?>auth.php">Entrar/Cadastrar</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +48,7 @@
         <h1>Corpo do Site</h1>
     </div>
     <footer id="footer">
-        <div class="social-container">
+        <div id="social-container">
             <ul>
                 <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
