@@ -24,15 +24,15 @@
                 </div>
                 <div class="col-md-4" id="register-container">
                     <h2>Criar Conta</h2>
-                    <form action="" method="POST">
-                        <input type="hidden" name="type" value="resgister">
+                    <form action="<?= $BASE_URL ?>auth_process.php" method="POST">
+                        <input type="hidden" name="type" value="register">
                         <div class="form-group">
                             <label for="email">E-mail:</label>
                             <input style="margin-bottom: 10px;" type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
                         </div>
                         <div class="form-group">
-                            <label for="nome">Nome:</label>
-                            <input style="margin-bottom: 10px;" type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome">
+                            <label for="name">Nome:</label>
+                            <input style="margin-bottom: 10px;" type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
                         </div>
                         <div class="form-group">
                             <label for="lastname">Sobrenome:</label>
