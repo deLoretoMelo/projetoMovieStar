@@ -9,10 +9,11 @@
 
     $message = new Message($BASE_URL);
 
+    $userDao = new UserDAO($conn, $BASE_URL);
+
     // Resgata o tipo do formulario
     $type = filter_input(INPUT_POST, "type");
 
-    echo $type;
 
     // Verificacao do tipo de formulario
     if($type == "register"){
@@ -25,6 +26,25 @@
         //verificacao de dados minimos
         if($name && $lastname && $email && $password){
 
+            //Verificar se as senhas batem
+            if($password === $confirmpassword){
+
+                // Veririfcar se o email ja está cadastrado no sistema
+                if($userDao->findByEmail($email) === false){
+
+                    echo "nenhum usuario foi encontrado";
+
+                } else {
+
+                    // Enviar mensagem de erro pois usuario ja existe
+                    $message->setMessage("Usuário ja cadastrado, tente outro email", "error", "back");
+                }
+
+            } else {
+
+                // Enviar mensagem de erro pela diferença de senhas
+                $message->setMessage("As senhas não são iguais", "error", "back");
+            }
 
 
         } else{
