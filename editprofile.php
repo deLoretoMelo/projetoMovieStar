@@ -19,7 +19,7 @@
 ?>
     <!-- Corpo de site -->
 
-    <div id="main-container" class="container-fluid">
+    <div id="main-container" class="container-fluid edit-profile-page">
         <div class="col-md-12">
             <form action="<?= $BASE_URL ?>user_process.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="type" value="update">
@@ -42,7 +42,7 @@
                             <input style="margin-bottom: 10px;" type="text" readonly class="form-control disabled" id="email" name="email" placeholder="Digite seu nome"
                             value="<?= $userData->email ?>">
                         </div>
-                        <input type="submit" class="btn form-btn" value="Alterar">
+                        <input type="submit" class="btn card-btn" value="Alterar">
                     </div>
                     <div class="col-md-4">
                         <div id="profile-image-container" style="background-image: url(
@@ -60,6 +60,24 @@
                     </div>
                 </div>
             </form>
+            <div class="row" id="change-password-container">
+                <div class="col-md-4">
+                    <h2>Alterar a senha</h2>
+                    <p class="page-description">Digite a nova senha e confirme para realizar a alteração</p>
+                    <form action="<?= $BASE_URL ?>user_process.php" method="POST">
+                        <input type="hidden" name="type" value="changepassword">
+                        <div class="form-group">
+                            <label for="password">Senha:</label>
+                            <input style="margin-bottom: 10px;" type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmpassword">Confirmação de senha:</label>
+                            <input style="margin-bottom: 10px;" type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirme sua senha">
+                        </div>
+                        <input type="submit" class="btn card-btn" value="Alterar Senha">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
