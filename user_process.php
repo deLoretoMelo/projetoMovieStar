@@ -70,7 +70,27 @@ if($type === "update"){
     //Atualizar senha do usuario
 } else if($type === "changepassword"){
 
+    $password = filter_input(INPUT_POST, "password");
+    $confirmpassword = filter_input(INPUT_POST, "confirmpassword");
+    
+    //Resgata dados do usuario
+    $userData = $userDao->verifyToken();
+    $id = $userData->id;
 
+    if($password === $confirmpassword){
+
+        $user = new User();
+
+        $finalPassword = $user->generatePassword($password);
+
+        $user->password = $finalPassword;
+        $user->id = $id;
+
+        $userDao->changePassword($user);
+
+    } else {
+        $message->setMessage("As senhas não batem", "error", "back");
+    }
 
 } else{
 
