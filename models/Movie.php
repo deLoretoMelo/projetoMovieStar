@@ -21,7 +21,7 @@
         public function buildMovie($data);
         public function fildAll();
         public function getLatestMovies();
-        public function getMovieByCategory();
+        public function getMovieByCategory($category);
         public function getMovieById();
         public function findById($id);
         public function findByTilte($title);
