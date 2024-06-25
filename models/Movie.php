@@ -22,7 +22,7 @@
         public function fildAll();
         public function getLatestMovies();
         public function getMovieByCategory($category);
-        public function getMovieById();
+        public function getMovieByUsersId($id);
         public function findById($id);
         public function findByTilte($title);
         public function create(Movie $movie);
