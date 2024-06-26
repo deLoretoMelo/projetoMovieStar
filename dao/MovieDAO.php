@@ -102,7 +102,23 @@
 
         public function findById($id){
 
+            $stmt = $this->conn->prepare("SELECT * FROM movies WHERE id = :id");
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+
+            if($stmt->rowCount() > 0){
+
+                $movieData = $stmt->fetch();
+                $movie = $this->buildMovie($movieData);
+                return $movie;
+
+
+            } else {
+                return false;
+            }
+
         }
+
         public function findByTilte($title){
 
         }
