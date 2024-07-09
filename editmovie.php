@@ -84,8 +84,9 @@
                 <input type="submit" class="btn card-btn" value="Adicionar Filme">
                     </form>
                 </div>
+                <div class="col-md-2"></div>
                 <div class="col-md-3">
-                    <div class="movie-image-container" style="background-image: url(
+                    <div class="movie-image-container edit" style="background-image: url(
                     '<?= $BASE_URL ?>img/movies/<?=$movie->image ?>');">
                     </div>
                 </div>

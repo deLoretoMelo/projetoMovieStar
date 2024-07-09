@@ -232,6 +232,13 @@
     width: auto;
 }
 
+/* edicao de filme */
+
+.edit{
+    border: 4px #F5C518 solid;
+    border-radius: 5px;
+}
+
 /* NEW MOVIE */
 
 .new-movie-container{
