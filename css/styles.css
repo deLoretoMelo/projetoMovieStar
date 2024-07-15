@@ -228,7 +228,7 @@
 }
 
 .edit-profile-page .card-btn, #add-movie-container .card-btn,
-#form-review-id .card-btn{
+#form-review-id .card-btn, #edit-movie-form .card-btn{
     width: auto;
 }
 

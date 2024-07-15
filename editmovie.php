@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <label for="title">Título</label>
                     <input style="margin-bottom: 10px;" class="form-control" type="text" name="title" id="title" 
-                    placeholder="<?= $movie->title ?>">
+                    value="<?= $movie->title ?>">
                 </div>
                 <div class="form-group">
                     <label for="image">Imagem:</label>
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <label for="length">Duração</label>
                     <input style="margin-bottom: 10px;" class="form-control" type="text" name="length" id="length"
-                    placeholder="<?= $movie->length ?>">
+                    value="<?= $movie->length ?>">
                 </div>
                 <div class="form-group">
                     <label for="category">Categoria</label>
@@ -81,7 +81,7 @@
                     <textarea style="margin-bottom: 10px;" class="form-control" name="description" id="description" rows="5"
                     placeholder="Descreva o filme..."><?= $movie->description ?></textarea>
                 </div>
-                <input type="submit" class="btn card-btn" value="Adicionar Filme">
+                <input type="submit" class="btn card-btn" value="Editar Filme">
                     </form>
                 </div>
                 <div class="col-md-2"></div>
