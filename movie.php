@@ -79,7 +79,7 @@
                 <p class="page-decription">Preencha o formulário com a nota e o comentário sobre o filme</p>
                 <form id="form-review-id" action="<?= $BASE_URL ?>review_process.php" method="POST">
                     <input type="hidden" name="type" value="create">
-                    <input type="hidden" name="id" value="<?= $movie->id ?>">
+                    <input type="hidden" name="movies_id" value="<?= $movie->id ?>">
                     <div class="form-group">
                         <label for="rating">Nota fo filme:</label>
                         <select class="form-control" name="rating" id="rating">
