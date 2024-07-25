@@ -63,8 +63,18 @@ require_once("models/User.php");
 
                 $reviewsData = $stmt->fetchAll();
 
+                $userDao = new UserDAO($this->conn, $this->url);
+
                 foreach($reviewsData as $review){
-                    $reviews[] = $this->buildReview($review);
+
+                    $reviewObject = $this->buildReview($review);
+
+                    // Chamar os dados do usuario
+                    $user = $userDao->findById($reviewObject->users_id);
+
+                    $reviewObject->users_id = $user;
+
+                    $reviews[] = $reviewObject;
                 }
 
             } 
