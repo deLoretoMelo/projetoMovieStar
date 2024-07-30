@@ -62,7 +62,7 @@
                 <span class="pipe"></span>
                 <span><?= $movie->category ?> </span>
                 <span class="pipe"></span>
-                <span><i class="fas fa-star"></i> 9</span>
+                <span><i class="fas fa-star"></i> <?= $movie->rating ?></span>
             </p>
             <?php if(!($movie->trailer == "")): ?>
                 <iframe src="<?= $movie->trailer ?>" width="560px" height="315px"

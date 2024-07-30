@@ -28,8 +28,6 @@
         if(!$userData){
             $message->setMessage("O usuario nao foi encontrado", "error", "index.php");
         }
-
-        $message->setMessage("O usuario nao foi encontrado", "error", "index.php");
     }
 
     $fullName = $user->getFullName($userData);
