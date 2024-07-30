@@ -37,10 +37,11 @@
         if($userData->id === $movie->users_id){
             $userOwnsMovie = true;
         }
+
+        //Resgatar as reviews do filme
+        $alreadyReviewed = $reviewDao->hasAlreadyReviewed($id, $userData->id);
     }
 
-    //Resgatar as reviews do filme
-    $moviereviews = $reviewDao->getmoviesReviews($id);
 
     //Checagem de trailer
     if($movie->image == ""){
@@ -48,7 +49,7 @@
     }
 
     //Resgatar os reviews
-    $alreadyReviewed = false;
+    $moviereviews = $reviewDao->getmoviesReviews($id);
 
 ?>
 
